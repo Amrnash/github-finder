@@ -5,7 +5,8 @@ function Navbar() {
     <nav className="bg-gray-800 z-10">
       <div className="container mx-auto flex justify-between py-4 px-2 items-center">
         <Link to="/" className="text-white text-4xl">
-          <FaGithub />
+          <FaGithub className="inline-block" />{" "}
+          <span className="font-bold text-xl">Github Finder</span>
         </Link>
         <div className="text-white">
           <Link to="/" className="mr-4 hover:text-gray-200">

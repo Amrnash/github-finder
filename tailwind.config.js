@@ -5,6 +5,9 @@ module.exports = {
       backgroundImage: {
         github: "url('../public/bg.jpg')",
       },
+      colors: {
+        card: "#1f293793",
+      },
     },
   },
   plugins: [],
