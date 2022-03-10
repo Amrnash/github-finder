@@ -10,7 +10,7 @@ function App() {
     <div className="flex flex-col justify-between h-screen bg-github bg-cover bg-center relative">
       <div className="overlay"></div>
       <Navbar />
-      <main className="container mx-auto z-10 overflow-y-scroll">
+      <main className="container mx-auto z-10 overflow-y-auto">
         <GithubProvider>
           <Routes>
             <Route path="/" element={<Home />} />

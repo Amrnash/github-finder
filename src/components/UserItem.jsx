@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function UserItem({ user }) {
   return (
     <>
-      <div className="rounded p-4 bg-card mt-4 flex m-1  shadow-lg">
+      <div className="rounded p-4 bg-card mt-4 flex m-1  shadow-lg border-b border-purple-500">
         <div className="w-20">
           <img src={user.avatar_url} className="w-full rounded-full" />
         </div>

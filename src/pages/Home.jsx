@@ -2,12 +2,21 @@ import { useContext, useState } from "react";
 import githubContext from "../context/githubContext";
 import UserItemsList from "../components/UserItemsList";
 import Loader from "../components/Loader";
+import Alert from "../components/Alert";
 function Home() {
   const { state, dispatch, fetchUsersByName } = useContext(githubContext);
   const [text, setText] = useState("");
+  const [error, setError] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchUsersByName(text);
+    if (!e.target.value || e.target.value === "") {
+      setError("Please Enter Something!");
+      setTimeout(() => {
+        setError("");
+      }, 5000);
+    } else {
+      fetchUsersByName(text);
+    }
   };
   const handleClear = () => {
     dispatch({ type: "CLEAR" });
@@ -19,10 +28,13 @@ function Home() {
           className="md:col-span-3 mx-2 col-span-4 lg:col-span-2 mt-2"
           onSubmit={handleSubmit}
         >
+          {" "}
+          {error && <Alert msg={error} type="error" />}
           <div className="flex h-12">
             <input
               type="text"
               className="rounded px-2 py-4 w-full h-12 text-lg rounded-r-none"
+              placeholder="Enter a github username"
               value={text}
               onChange={(e) => setText(e.target.value)}
             />
@@ -44,7 +56,7 @@ function Home() {
         </form>
       </div>
       {state.loading ? (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center mt-7">
           <Loader />
         </div>
       ) : (
