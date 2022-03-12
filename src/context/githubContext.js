@@ -1,8 +1,7 @@
 import { createContext, useReducer } from "react";
 import githubReducer from "../reducers/githubReducer";
 const GITHUB_URL = "https://api.github.com";
-const GITHUB_TOKEN = "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";
-
+const GITHUB_TOKEN = "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";
 const githubContext = createContext();
 
 export const GithubProvider = ({ children }) => {
