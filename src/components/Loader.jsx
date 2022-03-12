@@ -1,5 +1,5 @@
-function Loader() {
-  return <div className="loader"></div>;
+function Loader({ classes }) {
+  return <div className={`loader ${classes}`}></div>;
 }
 
 export default Loader;

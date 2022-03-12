@@ -9,7 +9,7 @@ function Home() {
   const [error, setError] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!e.target.value || e.target.value === "") {
+    if (!text || text === "") {
       setError("Please Enter Something!");
       setTimeout(() => {
         setError("");

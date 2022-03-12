@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import { GithubProvider } from "./context/githubContext";
@@ -14,6 +15,7 @@ function App() {
         <GithubProvider>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/users/:login" element={<Profile />} />
             <Route path="/about" element={<About />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>

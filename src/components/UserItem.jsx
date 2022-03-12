@@ -10,7 +10,7 @@ function UserItem({ user }) {
         <div className="flex flex-col justify-center ml-6">
           <p className="font-bold text-lg text-white">{user.login}</p>
           <Link
-            to=""
+            to={`/users/${user.login}`}
             className="text-gray-400 cursor-pointer hover:text-gray-300 transition-colors"
           >
             Show Profile
