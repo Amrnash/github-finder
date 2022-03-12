@@ -27,6 +27,7 @@ function Profile() {
   useEffect(() => {
     fetchUserByLogin(login);
     fetchReposOfUserByLogin(login);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (state.loading) return <Loader classes="ml-60" />;
