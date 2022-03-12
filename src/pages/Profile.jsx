@@ -17,7 +17,6 @@ function Profile() {
     bio,
     blog,
     twitter_username,
-    login: loginName,
     html_url,
     followers,
     following,

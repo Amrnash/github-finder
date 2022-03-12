@@ -14,7 +14,7 @@ function RepoCard({ repo }) {
     <div className="p-4 bg-gray-800 rounded my-2">
       <h3 className="mb-2 font-bold text-2xl text-white">
         <a href={html_url}>
-          <FaLink className="text-2xl inline-block" /> {repo.name}
+          <FaLink className="text-2xl inline-block" /> {name}
         </a>
       </h3>
       <p className="mb-3 text-white text-sm">{description}</p>
@@ -33,8 +33,7 @@ function RepoCard({ repo }) {
         </div>
         <div className="inline-block mr-2 rounded-lg bg-yellow-300 text-sm font-thin px-3 text-yellow-700">
           <FaUtensils className="text-l inline-block" />
-          <span className="align-middle">{watchers_count}</span>
-          {watchers_count}
+          <span className="align-middle">{forks}</span>
         </div>
       </div>
     </div>
